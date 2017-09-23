@@ -10,6 +10,18 @@ import java.util.List;
 public class MainLambdaExpression {
 
     public static void main(String[] args) {
+        functionalInterface();
+    }
+
+    private static void functionalInterface() {
+        Converter<String, Integer> converter = (from) -> Integer.valueOf(from);
+        Integer converted = converter.convert("123");
+        System.out.println(converted);
+
+        collections();
+    }
+
+    private static void collections() {
         List<String> names = Arrays.asList("peter", "anna", "mike", "xenia");
 
 
